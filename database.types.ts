@@ -42,6 +42,7 @@ export interface Database {
           choice4: string | null
           id: string
           question: string | null
+          url: string
         }
         Insert: {
           choice1?: string | null
@@ -50,6 +51,7 @@ export interface Database {
           choice4?: string | null
           id?: string
           question?: string | null
+          url?: string
         }
         Update: {
           choice1?: string | null
@@ -58,6 +60,7 @@ export interface Database {
           choice4?: string | null
           id?: string
           question?: string | null
+          url?: string
         }
         Relationships: []
       }
