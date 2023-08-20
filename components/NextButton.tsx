@@ -1,15 +1,13 @@
 'use client'
-import { PageProps } from '@/.next/types/app/layout'
-import { fetchQuestions } from '@/app/data/fetchQuestions'
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
 import { Button } from './ui/button'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 export default function NextButton() {
   const router = useRouter()
-  const nextQuestion = useCallback(() => {
-    router.push('/')
+  const onClick = useCallback(() => {
+    router.push('/questions/question2')
   }, [router])
 
-  return <Button onClick={nextQuestion}>Next</Button>
+  return <Button onClick={onClick}>Next</Button>
 }
